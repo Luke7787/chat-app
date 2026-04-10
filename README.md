@@ -33,27 +33,6 @@ A full-stack real-time chat application built with Socket.io, featuring authenti
 
 ---
 
-## Tech Stack
-
-**Frontend**
-- React (or Next.js if applicable)
-- CSS / Tailwind (based on your implementation)
-- Socket.io Client
-
-**Backend**
-- Node.js
-- Express.js
-- Socket.io
-
-**Database**
-- MongoDB (or your DB here)
-
-**Other**
-- JWT Authentication
-- Cloud storage for images (if used: Cloudinary / S3)
-
----
-
 ## Key Functionalities
 
 - Real-time bi-directional messaging
@@ -62,20 +41,3 @@ A full-stack real-time chat application built with Socket.io, featuring authenti
 - Secure auth with protected routes
 - Image handling for profiles and messages
 - Persistent chat history storage
-
----
-
-## Setup Instructions
-
-```bash
-# Clone repository
-git clone <repo-url>
-
-# Install dependencies
-npm install
-
-# Run backend
-npm run server
-
-# Run frontend
-npm run dev
