@@ -1,5 +1,81 @@
-Full-Stack Real-Time Chat Application
+# Real-Time Full Stack Chat Application
 
-A fully responsive real-time chat application built with modern web technologies, featuring instant messaging powered by Socket.io. The platform supports secure user authentication with sign-up and login functionality, along with persistent chat history and message logs.
-Users can personalize their experience through profile customization, including profile image uploads and a dedicated settings page with 32 unique themes. The application includes real-time online and offline status indicators, ensuring seamless user interaction awareness.
-To enhance user experience, the app integrates toast notifications for real-time feedback on actions, loading skeletons for smooth perceived performance, and a fully responsive UI optimized for all screen sizes.
+A full-stack real-time chat application built with Socket.io, featuring authentication, user profiles, theme customization, and real-time messaging capabilities.
+
+---
+
+## Features
+
+### Real-Time Communication
+- Instant messaging using Socket.io
+- Online / offline user status indicators
+- Live message updates without refresh
+
+### Authentication & Users
+- User sign up and login system
+- Secure authentication flow
+- Persistent user sessions
+
+### Chat System
+- Real-time chat between users
+- Chat history and message persistence
+- Image upload support in messages
+
+### User Profile
+- Profile image upload and update
+- Editable user settings page
+
+### UI / UX Enhancements
+- 32 customizable UI themes
+- Toast notifications for user actions
+- Loading skeletons for improved UX
+- Fully responsive design (mobile, tablet, desktop)
+
+---
+
+## Tech Stack
+
+**Frontend**
+- React (or Next.js if applicable)
+- CSS / Tailwind (based on your implementation)
+- Socket.io Client
+
+**Backend**
+- Node.js
+- Express.js
+- Socket.io
+
+**Database**
+- MongoDB (or your DB here)
+
+**Other**
+- JWT Authentication
+- Cloud storage for images (if used: Cloudinary / S3)
+
+---
+
+## Key Functionalities
+
+- Real-time bi-directional messaging
+- User presence tracking (online/offline)
+- Dynamic theme switching system
+- Secure auth with protected routes
+- Image handling for profiles and messages
+- Persistent chat history storage
+
+---
+
+## Setup Instructions
+
+```bash
+# Clone repository
+git clone <repo-url>
+
+# Install dependencies
+npm install
+
+# Run backend
+npm run server
+
+# Run frontend
+npm run dev
