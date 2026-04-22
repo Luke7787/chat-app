@@ -88,4 +88,13 @@ export const logout = (req, res) => {
   }
 };
 
-export const updateProfile = (req, res) => {};
+export const updateProfile = (req, res) => {
+  try {
+    const { profilePic } = req.body;
+    const userID = req.user._id;
+
+    if (!profilePic) {
+      res.status(400).json({ message: "Profile pic is required" });
+    }
+  } catch (error) {}
+};
