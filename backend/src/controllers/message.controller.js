@@ -38,7 +38,7 @@ export const sendMessages = async (req, res) => {
   try {
     const { text, image } = req.body;
     const { id: receiverId } = req.params;
-    const { senderId = req.user._id };
+    const senderId = req.user._id;
 
     let imageUrl;
     if (image) {
@@ -58,5 +58,8 @@ export const sendMessages = async (req, res) => {
     // todo: realtime funtionality goes here => socket.io
 
     res.status(201).json(newMessage);
-  } catch (error) {}
+  } catch (error) {
+    console.log("Error in sendMessages controller: ", error.message);
+    res.status(500).json({ error: "Internal server error" });
+  }
 };
