@@ -8,6 +8,8 @@ import SettingsPage from "./pages/SettingsPage";
 import ProfilePage from "./pages/ProfilePage";
 import { useAuthStore } from "./store/useAuthStore";
 
+import { Loader } from "lucide-react";
+
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
 
@@ -29,7 +31,10 @@ const App = () => {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/"
+          element={authUser ? <HomePage /> : <Navigate to="/login" />}
+        />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/settings" element={<SettingsPage />} />
