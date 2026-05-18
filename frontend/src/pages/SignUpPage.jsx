@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
+import { MessageSquare } from "lucide-react";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -22,6 +23,7 @@ const SignUpPage = () => {
       {/* left side */}
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
+          {/* LOGO */}
           <div className="text-center mb-8">
             <div className="flex flex-col items-center gap-2 group">
               <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -33,6 +35,8 @@ const SignUpPage = () => {
               </p>
             </div>
           </div>
+
+          <form onSubmit={handleSubmit} className="space-y-6"></form>
         </div>
       </div>
     </div>
