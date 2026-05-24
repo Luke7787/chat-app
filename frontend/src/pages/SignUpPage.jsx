@@ -119,7 +119,7 @@ const SignUpPage = () => {
 
             <button
               type="submit"
-              className="btn btn-primary w-full"
+              className="w-full py-3 rounded-lg font-medium bg-primary text-slate-900 hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
               disabled={isSigningUp}
             >
               {isSigningUp ? (
