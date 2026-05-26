@@ -5,14 +5,14 @@ import toast from "react-hot-toast";
 export const useAuthStore = create((set) => ({
   authUser: null,
   isSigningUp: false,
-  isLoggingIng: false,
+  isLoggingIn: false,
   isUpdatingProfile: false,
 
   isCheckingAuth: true,
 
   checkAuth: async () => {
     try {
-      const res = await axiosInstance.get("/auth/check ");
+      const res = await axiosInstance.get("/auth/check");
 
       set({ authUser: res.data });
     } catch (error) {
@@ -30,9 +30,22 @@ export const useAuthStore = create((set) => ({
       set({ authUser: res.data });
       toast.success("Account created successfully");
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message || "Something went wrong");
     } finally {
       set({ isSigningUp: false });
+    }
+  },
+
+  login: async (data) => {
+    set({ isLoggingIn: true });
+    try {
+      const res = await axiosInstance.post("/auth/login", data);
+      set({ authUser: res.data });
+      toast.success("Logged in successfully");
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Something went wrong");
+    } finally {
+      set({ isLoggingIn: false });
     }
   },
 
@@ -42,7 +55,7 @@ export const useAuthStore = create((set) => ({
       set({ authUser: null });
       toast.success("Logged out successfully");
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message || "Something went wrong");
     }
   },
 }));
