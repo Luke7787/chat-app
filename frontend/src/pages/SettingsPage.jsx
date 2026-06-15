@@ -1,12 +1,18 @@
 import { useThemeStore } from "../store/useThemeStore";
 
 const PREVIEW_MESSAGES = [
-  { id: 1, content: "Hello, how are you?", isSent: False }, 
-  { id: 2, content: "I'm doing great! Just working on some new features.", isSent: True },
+  { id: 1, content: "Hello, how are you?", isSent: false },
+  {
+    id: 2,
+    content: "I'm doing great! Just working on some new features.",
+    isSent: true,
+  },
 ];
 
 const SettingsPage = () => {
   const [theme, setTheme] = useThemeStore();
+
+  return <div className="h-screen container mx-auto px-4 pt-20 max-w-5xl" />;
 };
 
 export default SettingsPage;
