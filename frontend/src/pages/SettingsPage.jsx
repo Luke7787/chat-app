@@ -1,5 +1,7 @@
+import { THEMES } from "../constants";
 import { useThemeStore } from "../store/useThemeStore";
-import { THEMES } from "../constants";  
+import { Send } from "lucide-react";
+
 const PREVIEW_MESSAGES = [
   { id: 1, content: "Hello, how are you?", isSent: false },
   {
@@ -19,6 +21,11 @@ const SettingsPage = () => {
           <h2 className="text-lg font-semibold">Theme</h2>
           <p className="text-sm text-base-content/70">Choose a theme for your chat interface</p>
         </div>
+
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
+          {THEMES.map((theme) => (
+        </div>
+
       </div>
     </div>
   );
