@@ -1,3 +1,4 @@
+import Sidebar from "../components/Sidebar";
 import { useChatStore } from "../store/useChatStore";
 
 const HomePage = () => {
