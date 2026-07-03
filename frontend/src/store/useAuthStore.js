@@ -8,6 +8,7 @@ export const useAuthStore = create((set) => ({
   isLoggingIn: false,
   isUpdatingProfile: false,
   isCheckingAuth: true,
+  onlineUsers: [],
 
   checkAuth: async () => {
     try {
@@ -57,7 +58,7 @@ export const useAuthStore = create((set) => ({
       toast.error(error.response?.data?.message || "Something went wrong");
     }
   },
-  
+
   updateProfile: async (data) => {
     set({ isUpdatingProfile: true });
     try {
