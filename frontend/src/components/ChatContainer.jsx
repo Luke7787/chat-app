@@ -1,4 +1,5 @@
 import { useChatStore } from "../store/useChatStore";
+import { useAuthStore } from "../store/useAuthStore";
 import { useEffect } from "react";
 
 import ChatHeader from "./ChatHeader";
@@ -8,6 +9,7 @@ import MessageSkeleton from "./skeletons/MessageSkeleton";
 const ChatContainer = () => {
   const { messages, getMessages, isMessageLoading, selectedUser } =
     useChatStore();
+  const { authUser } = useAuthStore();
 
   useEffect(() => {
     getMessages(selectedUser?._id);
@@ -27,7 +29,28 @@ const ChatContainer = () => {
     <div className="flex-1 flex flex-col overflow-auto">
       <ChatHeader />
 
-      <p>messages...</p>
+      <div className="flex-1 overflow-auto p-4 space-y-4">
+        {messages.map((message) => (
+          <div
+            key={message._id}
+            className={`chat ${message.senderId === authUser._id ? "chat-end" : "chat-start"}`}
+          >
+            <div className="chat-image avatar">
+              <div className="size-10 rounded-full border">
+                <img
+                  src={
+                    message.senderId === authUser._id
+                      ? authUser.profilePic
+                      : selectedUser.profilePic
+                  }
+                  alt="profile"
+                />
+              </div>
+            </div>
+            <div className="chat-bubble">{message.text}</div>
+          </div>
+        ))}
+      </div>
 
       <MessageInput />
     </div>
