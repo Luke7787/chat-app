@@ -37,13 +37,13 @@ const MessageInput = () => {
         text: text.trim(),
         image: imagePreview,
       });
-
-      // Clear form
+    } catch (error) {
+      console.error("Error sending message:", error);
+    } finally {
+      // Clear form regardless of success or failure
       setText("");
       setImagePreview(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
-    } catch (error) {
-      console.error("Error sending message:", error);
     }
   };
 
