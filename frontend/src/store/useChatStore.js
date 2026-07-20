@@ -61,7 +61,7 @@ export const useChatStore = create((set, get) => ({
     });
   },
 
-  unsubscribeFromMessages: () => {}
+  unsubscribeFromMessages: () => {},
 
   // todo: optimized this one later
   setSelectedUser: (selectedUser) => set({ selectedUser }),
