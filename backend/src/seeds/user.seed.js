@@ -1,4 +1,6 @@
 import { config } from "dotenv";
+import { connectDB } from "../lib/db.js";
+import User from "../models/user.model.js";
 config();
 
 const seedUsers = [
@@ -95,9 +97,6 @@ const seedUsers = [
     profilePic: "https://randomuser.me/api/portraits/men/7.jpg",
   },
 ];
-
-import { connectDB } from "../lib/db.js";
-import User from "../models/user.model.js";
 
 const seedDatabase = async () => {
   try {
