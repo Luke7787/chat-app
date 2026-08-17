@@ -6,6 +6,35 @@ A full-stack real-time chat application built with Socket.io, featuring authenti
 
 ---
 
+## Tech Stack
+
+### Frontend
+- React 19
+- Vite
+- JavaScript
+- Tailwind CSS
+- DaisyUI
+- Zustand
+- React Router
+- Axios
+
+### Backend
+- Node.js
+- Express.js
+- Socket.io
+- JWT Authentication
+- bcryptjs
+
+### Database & Storage
+- MongoDB
+- Mongoose
+- Cloudinary
+
+### Deployment
+- Render
+
+---
+
 ## Features
 
 ### Real-Time Communication
