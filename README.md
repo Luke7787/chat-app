@@ -35,25 +35,22 @@ A full-stack real-time chat application built with Socket.io, featuring authenti
 
 ### Real-Time Communication
 - Instant messaging using Socket.io
-- Online / offline user status indicators
+- Online / offline user status
 - Live message updates without refresh
 
 ### Authentication & Users
-- User sign up and login system
-- Secure authentication flow
+- User signup and login
+- Secure authentication with protected routes
 - Persistent user sessions
+- Profile image upload and editing
 
 ### Chat System
-- Real-time chat between users
-- Chat history and message persistence
-- Image upload support in messages
+- Real-time messaging between users
+- Persistent chat history
+- Image uploads in messages
 
-### User Profile
-- Profile image upload and update
-- Editable user settings page
-
-### UI / UX Enhancements
-- 32 customizable UI themes
-- Toast notifications for user actions
-- Loading skeletons for improved UX
-- Fully responsive design (mobile, tablet, desktop)
+### UI / UX
+- 32 customizable themes
+- Toast notifications
+- Loading skeletons
+- Responsive design for mobile, tablet, and desktop
