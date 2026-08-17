@@ -4,8 +4,6 @@ Website Link: [https://chat-app-7v3r.onrender.com/login](https://chat-app-7v3r.o
 
 A full-stack real-time chat application built with Socket.io, featuring authentication, user profiles, theme customization, and real-time messaging capabilities.
 
----
-
 ## Tech Stack
 
 ### Frontend
@@ -33,8 +31,6 @@ A full-stack real-time chat application built with Socket.io, featuring authenti
 ### Deployment
 - Render
 
----
-
 ## Features
 
 ### Real-Time Communication
@@ -61,8 +57,6 @@ A full-stack real-time chat application built with Socket.io, featuring authenti
 - Toast notifications for user actions
 - Loading skeletons for improved UX
 - Fully responsive design (mobile, tablet, desktop)
-
----
 
 ## Key Functionalities
 
