@@ -1,4 +1,4 @@
-# Real-Time Full Stack Chat Application
+# Real-Time Chat Application
 
 Website Link: [https://chat-app-7v3r.onrender.com/login](https://chat-app-7v3r.onrender.com/login)
 
